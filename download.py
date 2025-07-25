@@ -39,7 +39,7 @@ def download_file(url, download_dir):
         driver = webdriver.Chrome(options=chrome_options)
         
         driver.get(url)
-        time.sleep(4)
+        time.sleep(3)
         
         download_button = driver.find_element(By.XPATH, "//a[contains(@class, 'link-button') and contains(text(), 'Download')]")
         
@@ -104,6 +104,6 @@ while True:
     i += 1
 
 # Xóa lần cuối và kiểm tra dung lượng cuối cùng
-time.sleep(3)
+time.sleep(2)
 clear_download_directory(download_dir)
 check_disk_space(download_dir)
